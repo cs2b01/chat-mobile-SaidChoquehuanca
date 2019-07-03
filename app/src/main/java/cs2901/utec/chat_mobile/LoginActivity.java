@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                         String message = response.getString("message");
                         if(message.equals("Authorized")) {
                             showMessage("Authenticated");
-                            Intent intent = new Intent(getActivity(), contactsActivity.class);
+                            Intent intent = new Intent(getActivity(),contactsActivity.class);
                             startActivity(intent);
 
                         }
