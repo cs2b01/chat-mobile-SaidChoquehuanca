@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -74,7 +72,7 @@ public class contactsActivity extends AppCompatActivity {
                             // use a linear layout manager
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-                            MyAdapter mAdapter = new MyAdapter(users);
+                            MyChatAdapter mAdapter = new MyChatAdapter(users);
                             recyclerView.setAdapter(mAdapter);
 
 
