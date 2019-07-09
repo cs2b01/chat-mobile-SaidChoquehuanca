@@ -14,7 +14,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     public JSONArray elements;
     private Context context;
@@ -59,7 +58,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
                 @Override
                 public void onClick(View v) {
-                    Intent goToMessage = new Intent(context,MessagesActivity.class);
+                    Intent goToMessage = new Intent(context,MessageActivity.class);
                     goToMessage.putExtra("user_from_id",userFromId);
                     goToMessage.putExtra("user_to_id",id);
                     goToMessage.putExtra("username", username);

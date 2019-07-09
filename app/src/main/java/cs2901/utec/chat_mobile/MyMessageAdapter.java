@@ -12,8 +12,7 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-public class MyMessageAdapter extends RecyclerView.Adapter<MyMessageAdapter.ViewHolder>{
+public class MyMessageAdapter extends RecyclerView.Adapter<MyMessageAdapter.ViewHolder> {
 
     public JSONArray elements;
     private Context mContext;
@@ -54,11 +53,13 @@ public class MyMessageAdapter extends RecyclerView.Adapter<MyMessageAdapter.View
             JSONObject element = elements.getJSONObject(position);
             String mFirstLine = element.getString("content");
             int userFromId = element.getInt("user_from_id");
-
             if(userFromId == this.userFromId){
                 holder.myLine.setText(mFirstLine);
                 holder.friendLine.setText("");
+                holder.friendLine.setVisibility(View.INVISIBLE);
+
             }else{
+                holder.myLine.setVisibility(View.INVISIBLE);
                 holder.myLine.setText("");
                 holder.friendLine.setText(mFirstLine);
             }

@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cs2901.utec.chat_mobile.ContactsActivity">
-
-    <!-- Current Logged User -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,17 +15,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/editboton">
             <TextView
                 android:id="@+id/contactsActivityTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contacts"/>
+                android:text="Contactos"
+                android:textSize="25dp"
+                android:textColor="#FF8000"
+                android:textAllCaps="true"
+                />
         </LinearLayout>
-    </LinearLayout>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/Users"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
+        android:id="@+id/main_recycler_view"
+        android:background="@drawable/fondo6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
